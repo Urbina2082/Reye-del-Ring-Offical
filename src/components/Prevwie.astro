@@ -1,33 +1,82 @@
 <div class="Prevwie">
-  <h3>REYES DEL RING</h3>
+  <div class="redes">
+    <h3>REDES SOCIALES</h3>
+    <div class="red">
+      <a href="#"><img src="facebook-logo-24.png" alt="" /></a>
+      <a href="#"><img src="instagram-logo-24.png" alt="" /></a>
+      <a href="#"><img src="whatsapp-logo-24.png" alt="" /></a>
+      <a href="#"><img src="tiktok-logo-24.png" alt="" /></a>
+    </div>
+  </div>
+
+  <img src="rey_video.webp" alt="" />
   <p>
     Revive un poco de lo que vivio en la pelea de box mas iconica de Sabinas
     Coahuila. Entre gritos y Gloria una noche inolvidable
   </p>
-  <video src="video_pelea.mp4"  controls></video>
+  <video autoplay  loop  src="video_peleaa.mp4" ></video>
 </div>
 
 <style>
-  .Prevwie{
-    
+  .redes  {
+    margin: 3rem 0rem 8rem;
+  }
+.redes a img{
+  width:clamp(24px,3vw,34px);
+}
+.red {
+
+  display:flex;
+  gap:clamp(1rem,2vw,2rem);
+justify-content: center;
+}
+
+.red a {
+    background: #ffffff35;
+  padding:.7rem;
+  border-radius:50%;
+}
+  /* -----------prewie------------ */
+  .Prevwie {
     color: #fff;
     text-align: center;
   }
 
-.Prevwie h3{
-    font-size: 3.5rem;
-  margin: .9rem 0rem;
-}
+  .Prevwie h3 {
+    font-size: clamp(2rem,4vw,3rem);
+    margin: 0.9rem 0rem;
+    font-weight: 200;
+  }
 
-.Prevwie p{
+  .Prevwie p {
     width: 40%;
     margin: auto;
-}
+    font-size:clamp(.9rem,1.3vw,2rem);
+  }
 
-video{
-margin: 2rem 0rem ;
-  height: 90vh;
-  border-radius: 1rem;
-}
+  .Prevwie img {
+    width: clamp(20rem,5vw,55rem);
+  }
 
+  video {
+    margin: 2rem 0rem;
+   
+    height: 80vh;
+    border-radius: 1rem;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .Prevwie p {
+    width: 90%;
+  }
+
+   video {
+    margin: 2rem 0rem;
+    width:80%;
+    height: auto;
+    border-radius: 1rem;
+  }
+    }
+  }
 </style>

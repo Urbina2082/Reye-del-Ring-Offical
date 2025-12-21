@@ -1,15 +1,84 @@
 <div class="Proximamente">
-   <h2>PROXIMAMENTE</h2>
+  <div class="kl"><p >PREPARATE PARA LA NOCHE MAS EPICA DEL BOXEO</p></div>
+
+  <img src="Proximamente.webp" alt="" />
+  <img src="line.png" alt="" />
+
+  <div class="count">
+    <div class="tarj">
+      <h3>00</h3>
+      <p>DIAS</p>
+    </div>
+    <div class="tarj">
+      <h3>00</h3>
+      <p>HORAS</p>
+    </div>
+    <div class="tarj">
+      <h3>00</h3>
+      <p>MINUTOS</p>
+    </div>
+  </div>
 </div>
 
 <style>
-    h2{
-        font-size: 7.8rem;
-        text-align: center;
-        color: #fff;
-           }
+  .kl p {
+      font-size: clamp(.8rem,2vw,1.3rem);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+  }
 
-           .Proximamente{
-            margin: 20rem auto;
-           }
+  img {
+     width: clamp(21rem,60vw,90rem); 
+   margin:auto;
+  }
+
+
+  .Proximamente {
+    margin: 10rem auto ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .count{
+   display:flex;
+   justify-content:center;
+   margin-top:3rem;
+   
+  }
+
+  .tarj{
+
+   text-align: center;
+   color:#fff;
+   margin:1rem ;
+   background: #ffffff5d;
+   padding:1.3rem;
+   border-radius: 1rem;
+  }
+
+.tarj h3{
+   font-size: clamp(3rem,5vw,0rem);
+   margin:0px;
+  }
+
+.tarj p{
+    font-size: clamp(.7rem,1vw,1rem); 
+}
+
+ @media screen and (max-width: 768px) {
+    .Proximamente {
+    margin:9rem auto ;
+    
+  }
+ .tarj{
+   padding:1.1rem;
+  }
+  
+
+
+
+  }
+
 </style>
