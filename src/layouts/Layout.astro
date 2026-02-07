@@ -6,9 +6,10 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="shortcut icon" href="logo.webp" type="image/x-icon">
 		<title>Reyes Del Ring - Oficial</title>
 	</head>
-	<body>
+	<body >
 		<slot />
 
 		        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
@@ -40,7 +41,23 @@ background-image: url(/pop.webp);
 	background-position: center;
 	background-attachment: fixed;
 	
-	
+	font-family: 'Global';
   }
+
+ 
+
+</style>
+
+<style is:global>
+	 @font-face {
+	font-family: "Road_Reyes";
+	src: url(/Fonts/Road_Rage.otf) format("opentype");
+  }
+
+   @font-face {
+	font-family: "Global";
+	src: url(/Fonts/Montserrat-VariableFont_wght.ttf) format("opentype");
+  }
+
 
 </style>

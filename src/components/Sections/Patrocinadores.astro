@@ -1,0 +1,106 @@
+<div class="Patrocinadores">
+  <h4>PATROCINADORES</h4>
+  <p>
+    Este evento puede llevarse a cabo gracias al apoyo de nuestros
+    patrocinadores...
+  </p>
+
+  <div class="cont_patocinios">
+    <div class="one">
+      <a href="https://www.facebook.com/profile.php?id=100086566262295&locale=es_LA"><img src="/Icons/Icons_Patrocinadores/1.webp" alt="" /></a>
+    </div>
+    <div class="one">
+      <a href="https://www.facebook.com/Mundo.cell.777?locale=es_LA_"><img src="/Icons/Icons_Patrocinadores/2.webp" alt="" /></a>
+    </div>
+    <div class="one">
+     <a href="https://www.facebook.com/profile.php?id=100063646011920&locale=es_LA"><img src="/Icons/Icons_Patrocinadores/3.webp" alt="" /></a>
+    </div>
+    <div class="one">
+      <img src="/Icons/Icons_Patrocinadores/4.webp" alt="" />
+    </div>
+    <div class="one">
+      <img src="/Icons/Icons_Patrocinadores/5.webp" alt="" />
+    </div>
+    <div class="one">
+      <img src="/Icons/Icons_Patrocinadores/6.webp" alt="" />
+    </div>
+
+    <div class="one">
+      <img src="/Icons/Icons_Patrocinadores/7.webp" alt="" />
+    </div>
+  </div>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .Patrocinadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  .Patrocinadores h4 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+    margin-bottom: 1.7rem;
+  }
+
+ .cont_patocinios {
+    width: 100%; /* Asegura que use el ancho disponible */
+    max-width: 1000px;
+    display: grid;
+    /* 1. Bajamos el mínimo a 200px o 250px para que quepan en móviles */
+    /* 2. Usamos 'auto-center' conceptualmente cambiando 1fr por min-content o auto */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    
+    justify-content: center; /* Centra las columnas si sobran espacios */
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem auto; /* Centra el contenedor principal */
+  }
+  .one {
+    /* 3. Quitamos el width fijo de 300px para que el grid mande */
+    width: 100%; 
+    max-width: 300px; /* Evita que crezca demasiado en pantallas grandes */
+    aspect-ratio: 16 / 9; /* Mantiene una forma elegante */
+    background-image: linear-gradient(to top, #ffffff1a 25%, #ffffff1a 100%); /* Bajé la opacidad para que sea sutil como tu idea */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Un toque extra para los bordes */
+  }
+
+ .one img {
+    width: 80%; /* El logo se adapta al tamaño del cuadro */
+    max-width: 170px;
+    height: auto;
+    object-fit: contain;
+   
+  }
+
+  a {
+  width: 100%;
+  margin: auto;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .cont_patocinios {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta el mínimo para móviles */
+      
+    }
+    
+  }
+</style>
+

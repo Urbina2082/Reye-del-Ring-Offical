@@ -3,7 +3,7 @@
     <div class="bloq_1"  > 
       <nav>
         <ul>
-          <li>​PRÓXIMAMENTE</li>
+          <li>​EDICION 2026</li>
 
           <li>COMBATES</li>
         </ul>
@@ -20,7 +20,7 @@
         <ul>
           <li>PATROCINADORES</li>
 
-          <li>​EDICIÓN 2026</li>
+          <li>​LUCHADORES</li>
         </ul>
       </nav>
       <img src="line.png" alt="" />
@@ -28,17 +28,22 @@
   </div>
 
   <div class="conjunt">
-    <img data-aos="zoom-in-up" src="rey.webp" alt="" />
+   <a href="https://www.youtube.com/@ReyesdelRing1992"><span> <u>@ReyesdelRing</u></span></a> 
+    <!-- <img data-aos="zoom-in-up" src="/rey.webp" alt="" /> -->
+     <h1>REYES DEL <br> RING</h1>
     <p data-aos="zoom-in-up">
-     ​"La Batalla del Kraken. Combates épicos organizados por Kraken Cross Training."
+    <span>28 DE MARZO · 17:30 CST</span><br> <br>
+    EVENTO DE BOXEO EN VIVO <br>
+    <img src="/Icons/map.webp" alt="">GIMNASIO MUNICIPAL SABINAS COAHUILA <br>
     </p>
 
     <div class="buts" data-aos="zoom-in-up">
-      <button>ENTRADAS</button>
-      <button id="but1">INFORMACION</button>
+      <button>ENTRADAS (Proximamente)</button>
     </div>
   </div>
 </div>
+
+
 
 <style>
   nav ul {
@@ -53,17 +58,42 @@
 
   nav ul li {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .bloq_center img {
-    width: clamp(6rem, 15vw, 25rem); /* Logo con tamaño responsivo */
+    width: clamp(5rem, 13vw, 23rem); /* Logo con tamaño responsivo */
   }
 
   .bloq_1 img {
     height: 6px;
     width: 100%;
     padding-top: 1rem;
+
+  }
+
+  .conjunt h1{
+    color: #fff;
+    font-size: clamp(3.5rem, 9vw, 20rem);
+    text-align: center;
+     font-family: 'Road_Reyes';
+     font-weight: 200;
+    line-height: 1;
+   display: flex;
+   
+   margin: 1rem 0rem 3rem 0rem;
+
+  }
+
+  .conjunt a {
+    color: #fff;
+    font-size: clamp(1.1rem, 2vw, 1.7rem);
+    text-align: center;
+    rotate: -6deg;
+    margin-bottom: .6rem;
+   font-family: 'Road_Reyes';
+    text-decoration: none;
   }
 
   .bloq_1 {
@@ -84,6 +114,7 @@
 
   .conjunt {
     width: 100%;
+    margin: 3rem 0rem 0rem 0rem;
     padding-top: 0;
     display: flex;
     justify-content: center;
@@ -92,32 +123,49 @@
   }
 
   .conjunt img {
-    width: clamp(22rem, 55vw, 55rem); /* Logo con tamaño responsivo */
+    width: clamp(20rem, 50vw, 50rem); /* Logo con tamaño responsivo */
     height: auto;
+    
+  }
+
+.conjunt p span {
+    color: #fff;
+    font-size: clamp(1.4rem, 2.9vw, 2.6rem);
+   font-weight: 700;
+   margin: 1rem auto;
   }
 
   .conjunt p {
     color: #fff;
-    font-size: clamp(0.8rem, 2vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.1rem);
     text-align: center;
+
+  }
+
+  .conjunt p img {
+    width: 1rem;
+    height: auto;
+    margin-right: .5rem;
+    filter: invert(1);
   }
 
   /* Buttons */
 
-  .buts button {
-    padding: 0.8rem 2.5rem;
+   button {
+   width: 18rem;
     border-radius: 0.5rem;
     border: #ffffff00 solid 0px;
     font-weight: 700;
-    font-size: clamp(0.8rem, 1vw, 1.1rem);
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
     margin: 0rem 0.8rem;
+    padding: .8rem 0rem;
   }
 
-  .buts #but1 {
+  /* .buts #but1 {
     background: #ca0b0b00;
     border: #ffffff solid 2px;
     color: #fff;
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     nav ul li {
@@ -129,9 +177,9 @@
     .buts button {
       padding: 0.8rem 1.5rem;
 }
-      .conjunt {
-        padding-top: 2rem;
-      }
+     h1 {
+      padding: 0.5rem;
+      margin: 1rem 0rem 2rem 0rem;
     }
   }
 </style>

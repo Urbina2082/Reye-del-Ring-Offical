@@ -1,0 +1,145 @@
+<div class="Proximamente">
+  <div data-aos="fade-down" class="kl">
+    <p>
+      DONDE EL CORAJE SE ENCUENTRA CON EL DESTINO. SOLO UNO <br />BAJARÁ CON EL
+      CINTURÓN; EL RESTO SERÁ HISTORIA. <br /> ¿ESTÁS LISTO PARA EL IMPACTO?
+    </p>
+  </div>
+
+  <!-- <img data-aos="zoom-in" src="Proximamente.webp" alt="" /> -->
+  <img data-aos="zoom-in" src="line.png" alt="" />
+
+  <div class="count">
+   
+    <div class="count">
+      <div data-aos="fade-up" class="tarj">
+        <h3 id="day">00</h3>
+        <p>​DÍAS</p>
+      </div>
+      <div data-aos="fade-up" class="tarj">
+        <h3 id="hour">00</h3>
+        <p>HORAS</p>
+      </div>
+      <div data-aos="fade-up" class="tarj">
+        <h3 id="minute">00</h3>
+        <p>MINUTOS</p>
+      </div>
+      <div data-aos="fade-up" class="tarj">
+        <h3 id="second">00</h3>
+        <p>SEGUNDOS</p>
+      </div>
+      <!-- <div class="tarj">
+      <h3>¡NO TE LO PUEDES PERDER!</h3>
+      <p>Únete a nosotros para vivir la emoción de la pelea entre Canelo Álvarez y Gennady Golovkin. ¡Compra tus boletos ahora y sé parte de esta histórica noche de boxeo!</p> -->
+    </div>
+  </div>
+  <script>
+    const CountDountDate = new Date("March 28,2026 17:30:00").getTime();
+
+    const updateCountdown = () => {
+      const now = Date.now();
+      const timeLeft = CountDountDate - now;
+
+      if (timeLeft < 0) {
+        clearInterval(timerInterval);
+        document.getElementById("countdown").innerHTML = "FINALIZADO";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("day").innerHTML = `${days} `;
+      document.getElementById("hour").innerHTML = `${hours} `;
+      document.getElementById("minute").innerHTML = `${minutes} `;
+      document.getElementById("second").innerHTML = `${seconds} `;
+    };
+    const timerInterval = setInterval(updateCountdown, 1000);
+  </script>
+  <style>
+    .kl p {
+      font-size: clamp(0.8rem, 2vw, 1.3rem);
+      text-align: center;
+      width: 90%;
+      color: #fff;
+      padding: 0rem 1rem;
+    }
+
+    img {
+      width: clamp(21rem, 60vw, 90rem);
+      margin: auto;
+    }
+
+    .Proximamente {
+      margin: 6rem auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #countdown {
+      color: #fff;
+      font-size: clamp(1rem, 1.5vw, 2rem);
+      text-align: center;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-size: 2rem;
+    }
+
+    #countdown div {
+      background: #ffffffeb;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      min-width: 80px;
+    }
+
+    .count {
+      display: flex;
+      justify-content: center;
+    }
+    .tarj {
+      text-align: center;
+      color: #fff;
+      margin: 1rem;
+       background-image: linear-gradient(to top, #ffffff00 25%, #ffffff1a 100%);
+      padding: 1.3rem;
+      border-radius: 1rem;
+    }
+
+    h3 {
+      font-size: clamp(1.8rem, 4vw, 4rem);
+      margin: 0px;
+    }
+
+    .tarj p {
+      font-size: clamp(0.7rem, 1vw, 1rem);
+    }
+
+    @media screen and (max-width: 768px) {
+      .Proximamente {
+        margin: 9rem auto;
+      }
+      .tarj {
+        padding: 1.1rem;
+        margin: 4px;
+      }
+      .count {
+        /* flex-direction: column; */
+        
+        gap: 0rem;
+   
+      }
+      .count div{
+        min-width: 60px;
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</div>
