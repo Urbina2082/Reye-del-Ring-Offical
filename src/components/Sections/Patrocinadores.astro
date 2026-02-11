@@ -1,3 +1,84 @@
+---
+const patrocinadores = [
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/1.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/2.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/3.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/4.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/5.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/6.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/7.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/8.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/9.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/10.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/11.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/12.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/13.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/14.webp",
+    link: "",
+  },
+  {
+    name: "ROPERO Y MAS",
+    img: "/Icons/Icons_Patrocinadores/15.webp",
+    link: "",
+  },
+  
+];
+---
+
 <div class="Patrocinadores">
   <h4>PATROCINADORES</h4>
   <p>
@@ -6,28 +87,13 @@
   </p>
 
   <div class="cont_patocinios">
-    <div class="one">
-      <a href="https://www.facebook.com/profile.php?id=100086566262295&locale=es_LA"><img src="/Icons/Icons_Patrocinadores/1.webp" alt="" /></a>
-    </div>
-    <div class="one">
-      <a href="https://www.facebook.com/Mundo.cell.777?locale=es_LA_"><img src="/Icons/Icons_Patrocinadores/2.webp" alt="" /></a>
-    </div>
-    <div class="one">
-     <a href="https://www.facebook.com/profile.php?id=100063646011920&locale=es_LA"><img src="/Icons/Icons_Patrocinadores/3.webp" alt="" /></a>
-    </div>
-    <div class="one">
-      <img src="/Icons/Icons_Patrocinadores/4.webp" alt="" />
-    </div>
-    <div class="one">
-      <img src="/Icons/Icons_Patrocinadores/5.webp" alt="" />
-    </div>
-    <div class="one">
-      <img src="/Icons/Icons_Patrocinadores/6.webp" alt="" />
-    </div>
-
-    <div class="one">
-      <img src="/Icons/Icons_Patrocinadores/7.webp" alt="" />
-    </div>
+    {
+      patrocinadores.map((socio) => (
+        <div class="one">
+          <img src={socio.img} alt={socio.name} />
+        </div>
+      ))
+    }
   </div>
 </div>
 
@@ -53,43 +119,46 @@
     margin-bottom: 1.7rem;
   }
 
- .cont_patocinios {
+  .cont_patocinios {
     width: 100%; /* Asegura que use el ancho disponible */
     max-width: 1000px;
     display: grid;
     /* 1. Bajamos el mínimo a 200px o 250px para que quepan en móviles */
     /* 2. Usamos 'auto-center' conceptualmente cambiando 1fr por min-content o auto */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
     justify-content: center; /* Centra las columnas si sobran espacios */
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 4rem auto; /* Centra el contenedor principal */
   }
   .one {
     /* 3. Quitamos el width fijo de 300px para que el grid mande */
-    width: 100%; 
+    width: 100%;
     max-width: 300px; /* Evita que crezca demasiado en pantallas grandes */
     aspect-ratio: 16 / 9; /* Mantiene una forma elegante */
-    background-image: linear-gradient(to top, #ffffff1a 25%, #ffffff1a 100%); /* Bajé la opacidad para que sea sutil como tu idea */
+    background-image: linear-gradient(
+      to top,
+      #ffffff00 25%,
+      #ffffff1a 100%
+    ); /* Bajé la opacidad para que sea sutil como tu idea */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px; /* Un toque extra para los bordes */
   }
 
- .one img {
+  .one img {
     width: 80%; /* El logo se adapta al tamaño del cuadro */
     max-width: 170px;
     height: auto;
     object-fit: contain;
-   
   }
 
   a {
-  width: 100%;
-  margin: auto;
-  display: flex;
+    width: 100%;
+    margin: auto;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -97,10 +166,10 @@
 
   @media screen and (max-width: 768px) {
     .cont_patocinios {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta el mínimo para móviles */
-      
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(100px, 1fr)
+      ); /* Ajusta el mínimo para móviles */
     }
-    
   }
 </style>
-
