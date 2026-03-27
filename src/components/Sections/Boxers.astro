@@ -1,46 +1,177 @@
+---
+import { boxers } from "../Consts/Boxers";
+---
+
 <div class="Boxers">
-    <h4>elige tu luchador</h4>
-    <p>Conoce los detalles de cada boxeador</p>
+  <h4>LA PELEA COMIENZA AQUÍ</h4>
+  <p>Conoce los detalles de cada boxeador</p>
 
-<span><img src="/Proximamente.webp" alt=""></span>
+  <div class="boxers">
+    {
+      boxers.map((boxer) => (
+        <div class="boxer" key={boxer.id}>
+         
+          <div class="boxer_one sub_boxer">
 
-</div>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+            <img
+              src={`/Boxers/vs-${boxer.box}/${boxer.luchador1.id}.avif`}
+              alt={boxer.id}
+               loading="lazy"
+            />
+             <h3>{boxer.luchador1.name}</h3>
+          </div>
+          <p>VS</p>
+          <div class="boxer_two sub_boxer">
+            <img
+              src={`/Boxers/vs-${boxer.box}/${boxer.luchador2.id}.avif`}
+              alt={boxer.id}
+               loading="lazy"
+            />
+            <h3>{boxer.luchador2.name}</h3>
+          </div>
+        </div>
+      ))
     }
-.Boxers {
-    margin: 6rem 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  </div>
+  <style>
+    /* images Boxers */
+    .Boxers .boxer img {
+   
+
+  height: 160px; /* o el alto que quieras */
+  object-fit: cover; /* evita deformación */
+padding: 0rem 1rem ;
+      margin: 0rem auto ;
+      border-radius: 10px;
+      mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 0px,
+        black 75%,
+        transparent
+      );
+    }
+
+    .Boxers .boxer img:hover {
+      transform: scale(1.05);
+      transition: transform 0.6s ease;
+    }
+
+    .boxer {
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+     background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 8rem,
+         rgba(255, 255, 255, 0.129) 0rem,
+        rgba(0, 0, 0, 0) 75%
+      );
+      padding: 0.8rem;
+      
+      .
+  width: 100%;
+  max-width: 390px; /* mismo tamaño para todos */
+  min-height: 220px; /* asegura misma altura */
+
+    }
+
+    .sub_boxer{
     
-color: rgb(255, 255, 255);
-text-align: center;
+  width: 180px; /* mismo ancho para todos */
+  height: 200px; /* mismo alto */
+
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .boxer h3 {
+      font-size: clamp(2rem, 2.5vw, 2.8rem);
+      margin: 0rem 0;
+      font-family: "Road_Reyes";
+      font-weight: 200;
+      width: min-content;
+      text-align: center;
+      line-height: 0.9;
+      rotate: calc(-10deg);
+      color: #ffffffce;
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.671);
+    }
+
+    .Boxers {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    
+    .Boxers h4 {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      font-family: "Road_Reyes";
+      font-weight: bold;
+      margin-bottom: 1.7rem;
+      
+    
+
+    }
+    .Boxers p {
+      font-size: clamp(1.2em, 2.3vw, 2rem);
+      text-align: center;
+      width: 90%;
+      color: #ffffffac;
+      padding: 0rem 1rem;
+      
+    }
+
+    .boxer p {
+      font-size: clamp(3.5rem, 6vw, 6.5rem);
+      font-family: "Road_Reyes";
+      font-weight: 100;
+    color: #ffffffad;
+    padding: 0rem;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.671);
+    }
+
+    .Boxers img {
+   
+     max-width:230px;
+     
+    
+    }
+
+    .boxers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .Boxers img {
+     max-width:120px;
+    }
+.boxer p {
+  width: 90px;
+      font-size: clamp(2.5rem, 4vw, 5rem);
+    }
+
+  .boxers {
+   
+      gap: 5rem;
+     
+    }
+     
+.boxer{
+    max-width: 340px;
+    min-height: 230px;
 }
 
-.Boxers h4 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
- font-family: 'Road_Reyes';
-    font-weight: bold;
-    margin-bottom: 1.7rem;
-    
-}
-.Boxers p {
-    font-size: clamp(.9em, 2vw, 1.3rem);
-    text-align: center;
-    width: 90%;
-    color: #fff;
-    padding: 0rem 1rem;
-}
-
-.Boxers img{
-    margin: 9rem 0rem;
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-}
-</style>
+    }
+  </style>
+</div>
