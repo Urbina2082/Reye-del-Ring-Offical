@@ -35,10 +35,10 @@ import { boxers } from "../Consts/Boxers";
   </div>
   <style>
     /* images Boxers */
-    .Boxers .boxer img {
+     .boxer img {
    
 
-  height: 160px; /* o el alto que quieras */
+  
   object-fit: cover; /* evita deformación */
 padding: 0rem 1rem ;
       margin: 0rem auto ;
@@ -50,11 +50,6 @@ padding: 0rem 1rem ;
         black 75%,
         transparent
       );
-    }
-
-    .Boxers .boxer img:hover {
-      transform: scale(1.05);
-      transition: transform 0.6s ease;
     }
 
     .boxer {
@@ -71,17 +66,11 @@ padding: 0rem 1rem ;
       );
       padding: 0.8rem;
       
-      .
-  width: 100%;
+      
   max-width: 390px; /* mismo tamaño para todos */
-  min-height: 220px; /* asegura misma altura */
-
     }
 
     .sub_boxer{
-    
-  width: 180px; /* mismo ancho para todos */
-  height: 200px; /* mismo alto */
 
 
       display: flex;
@@ -91,7 +80,7 @@ padding: 0rem 1rem ;
     }
 
     .boxer h3 {
-      font-size: clamp(2rem, 2.5vw, 2.8rem);
+      font-size: clamp(1.6rem, 2.3vw, 2.8rem);
       margin: 0rem 0;
       font-family: "Road_Reyes";
       font-weight: 200;
@@ -106,6 +95,9 @@ padding: 0rem 1rem ;
     .Boxers {
       color: rgb(255, 255, 255);
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+    
     }
 
     
@@ -113,9 +105,7 @@ padding: 0rem 1rem ;
       font-size: clamp(2rem, 3vw, 2.5rem);
       font-family: "Road_Reyes";
       font-weight: bold;
-      margin-bottom: 1.7rem;
-      
-    
+   
 
     }
     .Boxers p {
@@ -128,7 +118,7 @@ padding: 0rem 1rem ;
     }
 
     .boxer p {
-      font-size: clamp(3.5rem, 6vw, 6.5rem);
+      
       font-family: "Road_Reyes";
       font-weight: 100;
     color: #ffffffad;
@@ -136,19 +126,13 @@ padding: 0rem 1rem ;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.671);
     }
 
-    .Boxers img {
-   
-     max-width:230px;
-     
-    
-    }
-
     .boxers {
+      width: 100%;
+   margin: 0rem auto;
+      gap: 5rem;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
+  justify-content: center;
+     
     }
 
 
@@ -162,13 +146,15 @@ padding: 0rem 1rem ;
     }
 
   .boxers {
-   
-      gap: 5rem;
      
+      flex-direction: column;
     }
      
 .boxer{
-    max-width: 340px;
+    width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0rem auto;
     min-height: 230px;
 }
 
